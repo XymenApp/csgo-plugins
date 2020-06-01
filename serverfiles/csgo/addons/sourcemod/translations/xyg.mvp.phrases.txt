@@ -1,0 +1,82 @@
+//**********************************************  Valid Colors	********************************************************
+// {NORMAL}, {DARKRED}, {PINK}, {YELLOW}, {GREEN}, {LIGHTGREEN}, {RED}, {GRAY}, {BLUE}, {DARKBLUE}, {PURPLE}, {ORANGE} *
+//**********************************************************************************************************************
+//                                     http://i.imgur.com/q2wb8Cu.png                                                  *
+//{NORMAL} = x01 | {DARKRED} = x02 | {PINK} = x03 | {GREEN} = x04 | {YELLOW} = x09 | {LIGHTGREEN} = x06 | {RED} = x07  *
+//{GRAY} = x08 | {BLUE} = x0B | {DARKBLUE} = x0C | {PURPLE} = x0E |  {ORANGE} = x10                                    *
+//**********************************************************************************************************************
+"Phrases"
+{
+	
+	"MVPMainMenu"
+	{
+		"#format"		"{1:s},{2:.2f}"
+		"en"			"Custom Music Kit \nCurrent: {1}\nVolume: {2}"
+	}
+
+	"CurrentMVPIfNotSelected"
+	{
+		"#format"		""
+		"en"			"None"
+	}
+	
+	"SelectVol"
+	{
+		"#format"		""
+		"en"			"Select MVP Volume"
+	}
+	
+	"SelectMVP"
+	{
+		"#format"		""
+		"en"			"Select Your Custom MVP"
+	}
+	
+	"VolMenu"
+	{
+		"#format"		"{1:.2f}"
+		"en"			"Select MVP Volume\nCurrent: {1}\nYou can use !mvpvol for fine tuning"
+	}
+	
+	"Mute"
+	{
+		"#format"		""
+		"en"			"Mute"
+	}
+	
+	"MVPMenu"
+	{
+		"#format"		"{1:s}"
+		"en"			"Select Your Custom Music Kit\nCurrent: {1}"
+	}
+	
+	"AnnounceMVP"
+	{
+		"#format"		"{1:N},{2:s}"
+		"en"			"Playing <font color='#B15BFF'>{1}</font>s MVP Anthem - <font color='#FF0000'>{2}</font>"
+	}
+	
+	"MVPSelected"
+	{
+		"#format"		"{1:s},{2:s}"
+		"en"			"[{green}{1}{default}] Your Custom Music Kit is set to {purple}{2}."
+	}
+	
+	"NoMVPSelected"
+	{
+		"#format"		"{1:s}"
+		"en"			"[{green}{1}{default}] Your Custom Music Kit is set to {purple}None{default}."
+	}
+	
+	"VolSetFail"
+	{
+		"#format"		"{1:s}"
+		"en"			"[{green}{1}{default}] Volume values must be {red}0.0 - 1.0"
+	}
+	
+	"VolSetDone"
+	{
+		"#format"		"{1:s},{2:.f}"
+		"en"			"[{green}{1}{default}] Volume is set to {purple}{2}"
+	}
+}	

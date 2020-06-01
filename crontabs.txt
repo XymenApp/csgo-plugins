@@ -1,0 +1,20 @@
+# 1-10 : PUG, 11-20: Retake, 21-30: Executes, 31-40: Casual, 41-50: AWP
+# Start server when the system launches
+@reboot /home/csgoserver/csgoserver start
+@reboot /home/csgoserver/csgoserver-2 start
+@reboot /home/csgoserver/csgoserver-3 start
+@reboot /home/csgoserver/csgoserver-4 start
+@reboot /home/csgoserver/csgoserver-5 start
+@reboot /home/csgoserver/csgoserver-6 start
+@reboot /home/csgoserver/csgoserver-7 start
+@reboot /home/csgoserver/csgoserver-8 start
+@reboot /home/csgoserver/csgoserver-9 start
+@reboot /home/csgoserver/csgoserver-10 start
+#
+#
+# Check update daily at 7 AM
+0  7  *  *  *    /home/csgoserver/csgoserver update > /dev/null 2>&1
+#
+#
+# My CSGO monitor!
+* */2  *  *  *    /home/csgoserver/csgoserver monitor > /dev/null 2>&1 

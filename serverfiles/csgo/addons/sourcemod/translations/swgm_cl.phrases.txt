@@ -1,0 +1,7 @@
+"Phrases"
+{
+	"JoinSteam"
+	{
+		"en"		"[-=XymenGaming=-] In order to use this command you need to join our Steam group : https://steamcommunity.com/groups/xymengaming/"
+	}
+}
