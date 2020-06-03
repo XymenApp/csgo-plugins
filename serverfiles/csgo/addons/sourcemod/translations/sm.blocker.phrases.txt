@@ -1,0 +1,8 @@
+"Phrases"
+{
+	"UsedSMCommand"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"[{LIGHTGREEN}{1}{DEFAULT}] If you want plugins info, contact {GREEN}{2}{DEFAULT}"
+	}
+}
