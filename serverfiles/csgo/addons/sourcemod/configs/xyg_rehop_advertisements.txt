@@ -1,0 +1,55 @@
+// Advertisements 2.0
+// by Tsunami
+//
+// Types
+// -----
+// center: Center message
+// chat: Chat message
+// hint: Hint message
+// menu: Menu message
+// top: Top message
+//
+// Flags (optional)
+// -----
+// Accepts flags of admins that will not see the advertisement.
+// When omitted everyone will see the advertisement.
+// When left empty only admins will see the advertisement.
+
+"Advertisements"
+{
+    "1"
+    {
+        "chat"			"Server Commands: {green} !ws !gloves !knife !agents !mvp !emotes"
+        "flags"			""
+    }
+    "2"
+    {
+        "chat"			"This Server is managed by {purple}https://steamcommunity.com/id/whitecrow474226/"
+        "flags"			""
+    }
+    "3"
+    {
+        "chat"			"Buy your own CSGO server!! Visit {green}gaming.xymenapps.com{default} or contact server manager"
+        "flags"			""
+    }
+    "4"
+    {
+        "chat"			"Join our Discord Server : {green}https://discord.gg/2vx7Ebv"
+        "flags"			""
+    }
+    "5"
+    {
+        "chat"			"For any feedback or request!! Email us at {lime}xymenapps.official@gmail.com"
+        "flags"			""
+    }
+    "6"
+    {
+        "chat"			"Join our Steam Group : {green}https://steamcommunity.com/groups/xymengaming/"
+        "flags"			""
+    }
+    "7"
+    {
+        "chat"			"Any player who abandons a live match,{lime} whatever the reason{default}, will be {darkred}automatically banned permanently{default}!!"
+        "flags"			""
+    }
+}

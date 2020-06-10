@@ -48,3 +48,4 @@ I just made this project to make hectic procedure of adding each plugin and conf
 - MVP Plugin
 - Level Ranks
 - Fake Ranks
+- Maintenance Mode
