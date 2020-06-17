@@ -52,4 +52,14 @@
         "chat"			"Any player who abandons a live match,{lime} whatever the reason{default}, will be {darkred}automatically banned permanently{default}!!"
         "flags"			""
     }
+    "8"
+    {
+        "chat"			"Set your custom MVP by using {green}!mvp"
+        "flags"			""
+    }
+    "9"
+    {
+        "chat"			"You can mute MVP sounds by using {green}!mvpvol 0"
+        "flags"			""
+    }
 }
