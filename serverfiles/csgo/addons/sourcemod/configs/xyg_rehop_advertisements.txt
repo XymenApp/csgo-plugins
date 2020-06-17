@@ -57,4 +57,14 @@
         "chat"			"To {red}mute{default} MVP sounds set {green}!mvpvol 0"
         "flags"			""
     }
+    "9"
+    {
+        "chat"			"{red}ALERT!{default} Bunnyhopping is {green}enabled{default} on this server."
+        "flags"			""
+    }
+    "10"
+    {
+        "chat"			"To change the map on the server, use !rtv"
+        "flags"			""
+    }
 }

@@ -57,4 +57,9 @@
         "chat"			"To {red}mute{default} MVP sounds set {green}!mvpvol 0"
         "flags"			""
     }
+    "9"
+    {
+        "chat"			"To change the map on the server, use !rtv"
+        "flags"			""
+    }
 }
