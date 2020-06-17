@@ -64,7 +64,7 @@
     }
     "10"
     {
-        "chat"			"To change the map on the server, use !rtv"
+        "chat"			"To change the map on the server, use {green}!rtv"
         "flags"			""
     }
 }
