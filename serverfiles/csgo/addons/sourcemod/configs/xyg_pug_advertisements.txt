@@ -54,12 +54,12 @@
     }
     "8"
     {
-        "chat"			"Set your custom MVP by using {green}!mvp"
+        "chat"			"Select your {purple}Custom Music Kit{default} by using {green}!mvp"
         "flags"			""
     }
     "9"
     {
-        "chat"			"You can mute MVP sounds by using {green}!mvpvol 0"
+        "chat"			"To {red}mute{default} MVP sounds set {green}!mvpvol 0"
         "flags"			""
     }
 }
