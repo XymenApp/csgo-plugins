@@ -36,6 +36,11 @@
 	{
 		"en"		"The game is already live!"
 	}
+	"ReadyStatusPlayers"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"		"{1} out of {2} players are ready"
+	}
 	"ReadyStatus"
 	{
 		"#format"	"{1:i},{2:i},{3:s}"
@@ -45,6 +50,26 @@
 	{
 		"#format"	"{1:i},{2:i},{3:s},{4:s}"
 		"en"		"{1} out of {2} players are ready\nCaptain 1: {3}\nCaptain 2: {4}"
+	}
+	"ReadyStatusAllReadyPick"
+	{
+		"en"		"Starting player picking..."
+	}
+	"ReadyStatusAllReady"
+	{
+		"en"		"Starting match..."
+	}
+	"ReadyStatusAllReadyWaiting"
+	{
+		"en"		"Waiting to start..."
+	}
+	"ReadyStatusAllReadyVeto"
+	{
+		"en"		"Starting map veto process..."
+	}
+	"ReadyStatusAllReadyVote"
+	{
+		"en"		"Starting map voting..."
 	}
 	"CaptainNotSelected"
 	{
@@ -58,7 +83,7 @@
 	"ReadyCommandHint"
 	{
 		"#format"		"{1:s}"
-		"en"		"{RED}You will be kicked{NORMAL} if you don't ready up now up by typing {GREEN}{1}"
+		"en"		"You still need to ready up by typing {GREEN}{1}"
 	}
 	"NoPermission"
 	{
@@ -220,7 +245,7 @@
 	}
 	"SpecCantReady"
 	{
-		"en"		"You cannot ready up whe you are on spectator."
+		"en"		"You cannot ready up when you are on spectator."
 	}
 	"RestartCounter"
 	{
@@ -440,7 +465,7 @@
 	"TimeLeftInVoteHint"
 	{
 		"#format"		"{1:d}"
-		"en"		"<font size='22'>{1} seconds left in vote...</font>"
+		"en"		"{1} seconds left in vote..."
 	}
 	"IRVMenuTitle"
 	{
@@ -455,7 +480,7 @@
 	"MapVoteWinnerHintText"
 	{
 		"#format"		"{1:s}"
-		"en"		"<font size='22'>Vote over... {1} won!</font>"
+		"en"		"Vote over... {1} won!"
 	}
 	"IRVResultMessage"
 	{

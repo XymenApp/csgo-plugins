@@ -54,7 +54,7 @@
     }
     "8"
     {
-        "chat"			"To {red}mute{default} MVP sounds set {green}!mvpvol 0"
+        "chat"			"To {red}mute{default} MVP sounds, set {green}!mvpvol 0"
         "flags"			""
     }
     "9"
