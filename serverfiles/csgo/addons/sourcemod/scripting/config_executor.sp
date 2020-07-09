@@ -1,7 +1,7 @@
 #include <sourcemod>
 #define AUTHOR "-=XymenGaming=-"
 #define MAX_CONFIG_COUNT 1000
-#define PLUGIN_VERSION "1.2"
+#define PLUGIN_VERSION "1.3"
 #define CONFIG_FILE_PATH "configs/xyg_ce.cfg"
 
 int configCount;
@@ -51,13 +51,19 @@ public void loadConfigs(){
 	delete kv;
 }
 
-public void OnClientConnected(int client){
+public bool OnClientConnect(int client, char[] rejectmsg, int maxlen){
+	PrintToServer("[%s] OnClientConnect called with client = [%d]", AUTHOR, client);
 	PrintToServer("[%s] Client Number: %d connected.", AUTHOR, client);
-	if(client == 1){
+	int totalClientsInGame = GetClientCount(true);
+	PrintToServer("[%s] Total Clients In Server(InGame) : [%d]", AUTHOR, totalClientsInGame);
+	int totalClients = GetClientCount(false);
+	PrintToServer("[%s] Total Clients In Server (InGame+Connecting) : [%d]", AUTHOR, totalClients);
+	if(client == 1 && totalClients == 1){
 		ExecCfg();
 	}else{
 		PrintToServer("[%s] Not invoked at startup. Aborting Config Executor!!", AUTHOR);
 	}
+	return true;
 }
 
 public bool ExecCfg()
