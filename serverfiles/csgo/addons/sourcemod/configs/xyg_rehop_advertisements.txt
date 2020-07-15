@@ -67,4 +67,9 @@
         "chat"			"To change the map on the server, use {green}!rtv"
         "flags"			""
     }
+    "11"
+    {
+        "chat"          "{green}INFO!{default} Keep your spacebar - jump key {green}pressed{default} to do {purple}bunnyhopping{default} on this server"
+        "flags"         ""
+    }
 }
