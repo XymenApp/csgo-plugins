@@ -1,6 +1,11 @@
 # CSGO Plugins for PUG Server
 I just made this project to make hectic procedure of adding each plugin and configuring it easier. Just install the server and copy paste this files and you are good to go. EZZZ PZZ!!
 
+# Installation
+- Drag all files and folder in your home directory.
+- Set GLST, max players in config file
+- Set hostname, server password etc in config file
+
 # Features:
 
 ## -=PUG Mode=- 
