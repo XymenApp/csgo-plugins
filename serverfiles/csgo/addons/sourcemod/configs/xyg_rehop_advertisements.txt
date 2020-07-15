@@ -72,4 +72,9 @@
         "chat"          "{green}INFO!{default} Keep your spacebar - jump key {green}pressed{default} to do {purple}bunnyhopping{default} on this server"
         "flags"         ""
     }
+    "12"
+    {
+        "chat"			"{red}ALERT!{default} Alltalk is {green}enabled{default} on this server."
+        "flags"			""
+    }
 }
