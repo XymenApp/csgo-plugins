@@ -62,4 +62,9 @@
         "chat"			"To {red}mute{default} MVP sounds, set {green}!mvpvol 0"
         "flags"			""
     }
+    "10"
+    {
+        "chat"			"This {purple}server{default} is protected by {green}SourceMod Anti-Cheat"
+        "flags"			""
+    }
 }

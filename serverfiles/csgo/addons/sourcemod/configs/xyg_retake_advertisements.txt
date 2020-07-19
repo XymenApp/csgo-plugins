@@ -62,4 +62,9 @@
         "chat"			"To change the map on the server, use {green}!rtv"
         "flags"			""
     }
+    "10"
+    {
+        "chat"			"This {purple}server{default} is protected by {green}SourceMod Anti-Cheat"
+        "flags"			""
+    }
 }

@@ -77,4 +77,9 @@
         "chat"			"{red}ALERT!{default} Alltalk is {green}enabled{default} on this server."
         "flags"			""
     }
+    "13"
+    {
+        "chat"			"This {purple}server{default} is protected by {green}SourceMod Anti-Cheat"
+        "flags"			""
+    }
 }
