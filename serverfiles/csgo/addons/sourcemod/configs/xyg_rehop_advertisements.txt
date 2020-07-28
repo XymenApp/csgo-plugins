@@ -82,4 +82,9 @@
         "chat"			"This {purple}server{default} is protected by {green}SourceMod Anti-Cheat"
         "flags"			""
     }
+    "14"
+    {
+        "chat"          "{green}INFO!{default} Select your agent skin by using {green}!agents"
+        "flags"         ""
+    }
 }
