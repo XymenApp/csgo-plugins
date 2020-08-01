@@ -87,4 +87,9 @@
         "chat"          "{green}INFO!{default} Select your agent skin by using {green}!agents"
         "flags"         ""
     }
+    "15"
+    {
+        "chat"          "{purple}BANS LIST!{default} bans.xymenapps.com"
+        "flags"         ""
+    }
 }
