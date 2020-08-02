@@ -89,7 +89,7 @@
     }
     "15"
     {
-        "chat"          "{purple}BANS LIST!{default} bans.xymenapps.com"
+        "chat"          "{purple}BANS LIST!{green} bans.xymenapps.com"
         "flags"         ""
     }
 }
