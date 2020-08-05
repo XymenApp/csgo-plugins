@@ -42,7 +42,7 @@
 #define REQUIRE_PLUGIN
 
 #define PLUGIN_AUTHOR         "Hexah"
-#define PLUGIN_VERSION        "2.02"
+#define PLUGIN_VERSION        "2.03"
 
 #pragma semicolon 1
 #pragma newdecls required
@@ -70,6 +70,7 @@ bool bMyJBWarden;
 bool bGangs;
 bool bSteamWorks = true;
 bool bHideTag[MAXPLAYERS+1];
+bool bHasRoundEnded;
 
 int iRank[MAXPLAYERS+1] = {-1, ...};
 int iNextDefTag;
@@ -141,6 +142,7 @@ public void OnPluginStart()
 	//Event hooks
 	if (!HookEventEx("round_end", Event_RoundEnd))
 	LogError("Failed to hook \"round_end\", \"sm_hextags_roundend\" won't produce any effect.");
+	HookEvent("round_start", Event_RoundStart);
 	
 	hVibilityCookie = RegClientCookie("HexTags_Visibility", "Show or hide the tags.", CookieAccess_Private);
 	hSelTagCookie = RegClientCookie("HexTags_SelectedTag", "Selected Tag", CookieAccess_Private);
@@ -508,10 +510,16 @@ public Action RankMe_LoadTags(int client, int rank, any data)
 
 public void Event_RoundEnd(Event event, const char[] name, bool dontBroadcast)
 {
+	bHasRoundEnded = true;
 	if (!cv_bParseRoundEnd.BoolValue)
 	return;
-	
+
 	for (int i = 1; i <= MaxClients; i++)if (IsClientInGame(i))OnClientPostAdminCheck(i);
+}
+
+public void Event_RoundStart(Event event, const char[] name, bool dontBroadcast)
+{
+	bHasRoundEnded = false;
 }
 
 public Action CP_OnChatMessage(int& author, ArrayList recipients, char[] flagstring, char[] name, char[] message, bool& processcolors, bool& removecolors)
@@ -876,9 +884,12 @@ bool CheckSelector(const char[] selector, int client)
 	AdminId admin = GetUserAdmin(client);
 	if (admin != INVALID_ADMIN_ID)
 	{
+		
+		Debug_Print("Found as admin! %N", client);
 		/* CHECK ADMIN GROUP */
 		if (selector[0] == '@')
 		{
+			Debug_Print("Check group: %s",selector);
 			static char sGroup[32];
 			
 			GroupId group = admin.GetGroup(0, sGroup, sizeof(sGroup));
@@ -894,8 +905,9 @@ bool CheckSelector(const char[] selector, int client)
 		/* CHECK ADMIN FLAGS (1)*/
 		if (strlen(selector) == 1)
 		{
+			Debug_Print("Check for flag (1char): ",selector);
 			AdminFlag flag;
-			if (FindFlagByChar(selector[0], flag))
+			if (FindFlagByChar(CharToLower(selector[0]), flag))
 			{
 				if (admin.HasFlag(flag))
 				{
@@ -907,6 +919,7 @@ bool CheckSelector(const char[] selector, int client)
 		/* CHECK ADMIN FLAGS (2)*/
 		if (selector[0] == '&')
 		{
+			Debug_Print("Check group: %s",selector);
 			for (int i = 1; i < strlen(selector); i++)
 			{
 				AdminFlag flag;
@@ -919,6 +932,7 @@ bool CheckSelector(const char[] selector, int client)
 				}
 			}
 		}
+		Debug_Print("Unmatched admin: %s", selector);
 	}
 	
 	/* CHECK PLAYER TEAM */
@@ -1011,7 +1025,10 @@ public Action Timer_ForceTag(Handle timer)
 		if (StrEqual(sTag, selectedTags[i].ScoreTag))
 		continue;
 		
-		LogMessage("%L was changed by an external plugin, forcing him back to the HexTags' default one!", i, sTag);
+		if (!bHasRoundEnded){
+			LogMessage("%L was changed by an external plugin, forcing him back to the HexTags' default one!", i, sTag);
+		}
+		
 		CS_SetClientClanTag(i, selectedTags[i].ScoreTag);
 	}
 }
@@ -1297,4 +1314,21 @@ public int Native_AddCustomSelector(Handle plugin, int numParams)
 public int Native_RemoveCustomSelector(Handle plugin, int numParams)
 {
 	return pfCustomSelector.RemoveFunction(plugin, GetNativeFunction(1));
+}
+
+
+/* From smlib */
+stock void String_ToLower(const char[] input, char[] output, int size)
+{
+	size--;
+
+	int x=0;
+	while (input[x] != '\0' && x < size) {
+
+		output[x] = CharToLower(input[x]);
+
+		x++;
+	}
+
+	output[x] = '\0';
 }
